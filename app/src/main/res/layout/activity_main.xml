@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <!-- 툴바 -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/black">
+
+        <!-- 커스텀 컨텐츠: 텍스트 → 로고 순서 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily Fit"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_logo"
+                android:tint="@android:color/white" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:dateTextAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+    <!-- 메뉴 버튼 목록 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:divider="?android:attr/dividerVertical"
+        android:showDividers="middle">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTodo"
+            style="@style/DailyFit.MenuButton"
+            app:icon="@drawable/ic_todo"
+            android:text="할 일 관리" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNews"
+            style="@style/DailyFit.MenuButton"
+            android:layout_marginTop="8dp"
+            app:icon="@drawable/ic_news"
+            android:text="뉴스 보기" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAlarm"
+            style="@style/DailyFit.MenuButton"
+            android:layout_marginTop="8dp"
+            app:icon="@drawable/ic_alarm"
+            android:text="알람 관리" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGame"
+            style="@style/DailyFit.MenuButton"
+            android:layout_marginTop="8dp"
+            app:icon="@drawable/ic_game"
+            android:text="두더지 게임" />
+
+    </LinearLayout>
+
+</LinearLayout>

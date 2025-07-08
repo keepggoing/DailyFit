@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DailyFit" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/pink_500</item>
+        <item name="colorSecondary">@color/pink_500</item>
+    </style>
+
+    <style name="Theme.DailyFit" parent="Base.Theme.DailyFit" />
+</resources>

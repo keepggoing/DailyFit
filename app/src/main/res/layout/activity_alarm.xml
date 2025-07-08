@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+
+        <!-- 알람 설정 탭 (핵심: android.widget.Button 명시) -->
+        <android.widget.Button
+            android:id="@+id/btnTabSetting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="알람 설정"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:background="#000000"
+            android:stateListAnimator="@null"
+            android:elevation="0dp" />
+
+        <!-- 등록된 알람 탭 -->
+        <android.widget.Button
+            android:id="@+id/btnTabList"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="등록된 알람"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:background="#000000"
+            android:stateListAnimator="@null"
+            android:elevation="0dp" />
+    </LinearLayout>
+
+    <!-- 알람 설정 화면 -->
+    <FrameLayout
+        android:id="@+id/view_alarm_setting"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <include
+            layout="@layout/view_alarm_setting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <!-- 등록된 알람 목록 화면 -->
+    <FrameLayout
+        android:id="@+id/view_alarm_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone">
+        <include
+            layout="@layout/view_alarm_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+</LinearLayout>

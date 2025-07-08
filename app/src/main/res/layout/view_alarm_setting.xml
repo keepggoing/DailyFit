@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 날짜 선택 -->
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="true"
+            android:theme="@style/InlineDatePickerTheme" />
+
+        <!-- 시간 선택 -->
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner" />
+
+        <!-- 등록 / 취소 버튼 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnDateReg"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:text="등록"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#000000"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="16dp" />
+
+            <Button
+                android:id="@+id/btnDateCancel"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:text="취소"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#000000"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
